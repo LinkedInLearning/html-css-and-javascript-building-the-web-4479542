@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/universal
 {
-  "name": "Default Linux Universal",
+  "name": "HTML, CSS, and JavaScript: Building the Web",
   "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
@@ -9,11 +9,11 @@
   "customizations": {
     "vscode": {
       "extensions": [
-    "GitHub.github-vscode-theme",
-    "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "ritwickdey.LiveServer",
-    "stylelint.vscode-stylelint"
+        "GitHub.github-vscode-theme",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ritwickdey.LiveServer",
+        "stylelint.vscode-stylelint"
       ]
     }
   },
