@@ -1,20 +1,14 @@
 # Introduction To CSS
 
-In the previous chapter, we learned
-
 ## 01 - CSS In Action
 
 Welcome back.
 
 In the previous chapter, we learned core concepts of HTML and built out the basic structure for our virtual terrarium.
 
-Let's see what our digital terrarium looks like now. You can preview the webpage using the Live Server extension - or by using this command to start a preview server on port 5000.
+!!! note "Task: Preview the App"
 
-```bash
-python -m http.server 5000
-```
-
-**What do you see?** - You should see a single white page with all the images lined up against one side of the screen
+    Let's see what our digital terrarium looks like now.Preview the webpage using the Live Server extension - or use `python -m http.server 5000` to start a preview server from the terminal. You should see a single page with all images lined up on one side.
 
 In this lesson, we're going to add styles to our online terrarium and learn more about several CSS concepts: like the cascade and inheritance, the use of selectors & properties, positioning, and using CSS to build layouts and position components.
 
@@ -22,16 +16,19 @@ In the process we will slowly transform our terrarium into the stylish home for 
 
 ## 02 - Stylesheets & Setup
 
-In your terrarium folder, create a new file called style.css. Let's quickly look at our HTML code to see how we connect this new "stylesheet" to the "structure" of our web application.
+`Stylesheets` are like a collection of design ideas and instructions for your home. Just like you have different design themes for different rooms in your house, stylesheets define the overall look and feel of your website.
+
+Let's quickly look at our HTML code to see how we connect this new "stylesheet" to the "structure" of our web application.
 
 ```html
 <!-- import the webpage's stylesheet -->
 <link rel="stylesheet" href="./style.css" />
 ```
 
-`Stylesheets` are like a collection of design ideas and instructions for your home. Just like you have different design themes for different rooms in your house, stylesheets define the overall look and feel of your website.
+You learned about the `link` tag in the previous HTML chapter. So all we need to do now is create the stylesheet file named there.
 
-Right now there is nothing in the stylesheet. Let's fix that next.
+!!! note "Task: Create new `style.css` file"
+In your terrarium folder, create a new empty file called style.css. Right now there is nothing in the stylesheet. Let's fix that next.
 
 ## 03 - Cascading & Inheritance
 
