@@ -1,4 +1,4 @@
-# Video 1: Understanding Variables
+# 01 - Understanding Variables
 
 Welcome back! In this lesson, we will learn about variables. Variables are fundamental in any programming language, including JavaScript. They are containers that hold data values, which can be numbers, text, or even more complex data.
 
@@ -28,7 +28,7 @@ In this lesson, we introduced variables, which are essential for storing and man
 
 Understanding variables is crucial because they allow us to store and work with data dynamically. In the next lesson, we’ll learn about functions and how they can perform tasks for us in JavaScript. See you then!
 
-# Video 4: Creating Functions
+# 02 - Creating Functions
 
 Welcome back! Today, we’re going to talk about functions in JavaScript. Functions are one of the most important concepts in programming. They allow us to group a set of instructions into a single unit that can be executed whenever we need it.
 
@@ -62,7 +62,7 @@ In this lesson, we introduced functions, which allow us to group a set of instru
 
 Understanding functions is crucial because they help us organize our code and make it more reusable. In the next lesson, we’ll learn about manipulating the DOM using JavaScript. See you soon!
 
-# Video 4: Manipulating the DOM
+# 03 - Manipulating the DOM
 
 Welcome back! Today, we’re going to learn about manipulating the DOM using JavaScript. The DOM, or Document Object Model, represents the structure of our webpage as a tree of objects. JavaScript allows us to interact with the DOM, making our webpages dynamic and interactive.
 
@@ -99,7 +99,7 @@ In this lesson, we learned about manipulating the DOM using JavaScript. We used 
 
 Understanding how to manipulate the DOM is essential for creating dynamic and interactive webpages. In the next lesson, we’ll learn about event handling and how to respond to user actions. Stay tuned!
 
-# Video 5: Event Handling
+# 04 - Event Handling
 
 Welcome back! Today, we’re going to learn about event handling in JavaScript. Event handling allows us to listen for and respond to user actions like clicks, drags, and more. This is a key part of making our webpage interactive.
 
@@ -190,7 +190,7 @@ In this lesson, we learned about event handling and added event listeners to our
 
 Understanding event handling is crucial for creating interactive webpages. In the next lesson, we’ll review what we’ve learned and finalize the draggable elements functionality. See you soon!
 
-# Video 6: Putting It All Together
+# 05 - Putting It All Together
 
 Welcome to the final lesson! Today, we will review what we’ve learned and finalize the draggable elements functionality. We’ve covered variables, functions, DOM manipulation, and event handling. Now, let’s ensure that all our plant elements are draggable.
 
