@@ -51,8 +51,6 @@ Inside the function, we re-declare our position variables to ensure they are sco
 Save your `script.js` file. Your code should now look like this:
 
 ```javascript
-let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
 function dragElement(terrariumElement) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 }
@@ -85,8 +83,6 @@ dragElement(document.getElementById('plant2'));
 Save your `script.js` file. Your code should now look like this:
 
 ```javascript
-let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
 function dragElement(terrariumElement) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 }
@@ -150,8 +146,6 @@ function stopElementDrag() {
 
 Save your `script.js` file. Your code should now look like this:
 ```javascript
-let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
 function dragElement(terrariumElement) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     terrariumElement.onpointerdown = pointerDrag;
@@ -216,8 +210,6 @@ dragElement(document.getElementById('plant14'));
 
 Save your `script.js` file. Your final code should look like this:
 ```javascript
-let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
 function dragElement(terrariumElement) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     terrariumElement.onpointerdown = pointerDrag;
