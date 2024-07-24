@@ -1,4 +1,4 @@
-# HTML, CSS, and JavaScript: Building the Web
+# Welcome, Learner!
 
 This is the repository for the LinkedIn Learning course HTML, CSS, and JavaScript: Building the Web. The full course is available from [LinkedIn Learning][lil-course-url].
 
@@ -26,9 +26,66 @@ In this LinkedIn course, we walk through three of the sample projects from that 
 
 ### Project 1: Terrarium
 
+Learn to construct a digital terrarium using HTML (structure) and CSS (style). Then use JavaScript (interactivity) to support a _drag and drop_ capability that allows users to re-arrange the various plants within the terrarium, to suit their preference.
+
+> Want to preview the application? Try the following commands:
+
+```bash
+# Change to the Terrarium Directory
+cd solutions/01-terrarium
+
+# Run a webserver on a specific port (5000)
+python -m http.server 5000
+```
+
+You should see a pop-up giving you the option to "Open in browser" to preview the application. Continue, and you should see something like this:
+
+| Render The Terrarium                            | Rearrange The Plants                             |
+| :---------------------------------------------- | :----------------------------------------------- |
+| ![Render the Terrarium](./img/terrarium-01.png) | ![Rerrange The Elements](./img/terrarium-02.png) |
+
 ### Project 2: Typing Game
 
+Build a simple game that tests the accuracy and speed of your typing. Along the way, you'll learn about the publish-subscribe (pubsub) pattern for tracking and handling real-time events for building engaging games.
+
+> Want to preview the application? Try the following commands:
+
+```bash
+# Change to the Terrarium Directory
+cd solutions/02-typing-game
+
+# Run a webserver on a specific port (5001)
+python -m http.server 5001
+```
+
+You should see a pop-up giving you the option to "Open in browser" to preview the application. Continue, and you should see something like this:
+
+|                                     |
+| :---------------------------------: |
+| ![Get Started](./img/typing-01.png) |
+| ![Keep Going](./img/typing-02.png)  |
+|  ![All Done](./img/typing-03.png)   |
+
 ### Project 3: Space Game
+
+Build a more complex 2D game using advanced HTML elements like `canvas` and advanced JS concepts like _async/await_. Understand how to implement game logic and behaviors like _collision detection_ to create rich interactive user experiences.
+
+> Want to preview the application? Try the following commands:
+
+```bash
+# Change to the Terrarium Directory
+cd solutions/03-space-game
+
+# Run a webserver on a specific port (5001)
+python -m http.server 5002
+```
+
+You should see a pop-up giving you the option to "Open in browser" to preview the application. Continue, and you should see something like the rendered terrarium below.
+
+|                                         |
+| :-------------------------------------: |
+| ![Get Started](./img/space-game-01.png) |
+|  ![Game Over](./img/space-game-02.png)  |
 
 ---
 
