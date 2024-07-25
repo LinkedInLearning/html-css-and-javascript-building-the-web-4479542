@@ -375,6 +375,7 @@ Let’s recap:
 - We created functions to group our code into reusable blocks.
 - We manipulated the DOM to interact with our HTML elements.
 - We handled events to respond to user actions.
+- We used closures to maintain access to important variables, enabling our drag-and-drop functionality to work correctly by keeping track of the mouse and element positions even after the initial function has executed.
 
 By combining all these concepts, we created a dynamic and interactive virtual terrarium where the plants can be dragged around the screen.
 
