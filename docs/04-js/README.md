@@ -9,10 +9,14 @@ For our draggable terrarium, we need to keep track of the position of our elemen
 Open your `script.js` file. At the top of the file, we will declare four variables using the `let` keyword. These variables will store the initial and current positions of the mouse cursor. Add the following code to your `script.js` file:
 
 ```javascript
-let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+let pos1 = 0,
+  pos2 = 0,
+  pos3 = 0,
+  pos4 = 0;
 ```
 
 Here’s what each variable represents:
+
 - `pos1` and `pos2` will store the change in cursor position on the X and Y axis.
 - `pos3` and `pos4` will store the current cursor position on the X and Y axis.
 
@@ -21,7 +25,10 @@ By setting these variables to 0 initially, we ensure they have a defined value b
 Let’s save our `script.js` file. Your code should now look like this:
 
 ```javascript
-let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+let pos1 = 0,
+  pos2 = 0,
+  pos3 = 0,
+  pos4 = 0;
 ```
 
 In this lesson, we introduced variables, which are essential for storing and manipulating data in JavaScript. We declared four variables that will help us track the position of our elements while they are being dragged.
@@ -40,7 +47,10 @@ Open your `script.js` file. Below our variable declarations, we’ll add a new f
 
 ```javascript
 function dragElement(terrariumElement) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  let pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
 }
 ```
 
@@ -52,7 +62,10 @@ Save your `script.js` file. Your code should now look like this:
 
 ```javascript
 function dragElement(terrariumElement) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  let pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
 }
 ```
 
@@ -71,24 +84,27 @@ Open your `script.js` file. Below our `dragElement` function, we’ll use the `d
 Let’s start by selecting the element with the ID `plant1` and call the `dragElement` function:
 
 ```javascript
-dragElement(document.getElementById('plant1'));
+dragElement(document.getElementById("plant1"));
 ```
 
 We’ll also select the element with the ID `plant2`:
 
 ```javascript
-dragElement(document.getElementById('plant2'));
+dragElement(document.getElementById("plant2"));
 ```
 
 Save your `script.js` file. Your code should now look like this:
 
 ```javascript
 function dragElement(terrariumElement) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  let pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
 }
 
-dragElement(document.getElementById('plant1'));
-dragElement(document.getElementById('plant2'));
+dragElement(document.getElementById("plant1"));
+dragElement(document.getElementById("plant2"));
 ```
 
 In this lesson, we learned about manipulating the DOM using JavaScript. We used the `document.getElementById` method to select our plant elements by their ID and called the `dragElement` function to make them draggable.
@@ -104,159 +120,257 @@ In this lesson, we’ll add event listeners to our plant elements to handle the 
 Open your `script.js` file. Inside the `dragElement` function, we’ll add an event listener for the `pointerdown` event. This event is triggered when the user presses a pointer button, like a mouse click, on the element.
 
 Let’s add the event listener inside the `dragElement` function:
+
 ```javascript
 function dragElement(terrariumElement) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    terrariumElement.onpointerdown = pointerDrag;
+  let pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
+  terrariumElement.onpointerdown = pointerDrag;
 }
 ```
 
 The `onpointerdown` property is set to our `pointerDrag` function, which we’ll define next. This function will handle the initial actions when the user starts dragging the element.
 
 Next, let’s add the `pointerDrag` function inside the `dragElement` function:
+
 ```javascript
 function pointerDrag(e) {
-    e.preventDefault();
-    console.log(e);
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onpointermove = elementDrag;
-    document.onpointerup = stopElementDrag;
+  e.preventDefault();
+  console.log(e);
+  pos3 = e.clientX;
+  pos4 = e.clientY;
+  document.onpointermove = elementDrag;
+  document.onpointerup = stopElementDrag;
 }
 ```
 
 The `pointerDrag` function takes an event object `e` as its parameter. The `e.preventDefault()` method prevents any default actions that might occur when the event is triggered. The `console.log(e)` statement logs the event object to the console, which is useful for debugging.
 
 Now, let’s update our code to include the `elementDrag` and `stopElementDrag` functions:
+
 ```javascript
 function elementDrag(e) {
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + 'px';
-    terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + 'px';
+  pos1 = pos3 - e.clientX;
+  pos2 = pos4 - e.clientY;
+  pos3 = e.clientX;
+  pos4 = e.clientY;
+  terrariumElement.style.top = terrariumElement.offsetTop - pos2 + "px";
+  terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + "px";
 }
 
 function stopElementDrag() {
-    document.onpointerup = null;
-    document.onpointermove = null;
+  document.onpointerup = null;
+  document.onpointermove = null;
 }
 ```
 
 Save your `script.js` file. Your code should now look like this:
+
 ```javascript
 function dragElement(terrariumElement) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    terrariumElement.onpointerdown = pointerDrag;
+  let pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
+  terrariumElement.onpointerdown = pointerDrag;
 
-    function pointerDrag(e) {
-        e.preventDefault();
-        console.log(e);
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-       
+  function pointerDrag(e) {
+    e.preventDefault();
+    console.log(e);
+    pos3 = e.clientX;
+    pos4 = e.clientY;
 
- document.onpointermove = elementDrag;
-        document.onpointerup = stopElementDrag;
-    }
+    document.onpointermove = elementDrag;
+    document.onpointerup = stopElementDrag;
+  }
 
-    function elementDrag(e) {
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + 'px';
-        terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + 'px';
-    }
+  function elementDrag(e) {
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    terrariumElement.style.top = terrariumElement.offsetTop - pos2 + "px";
+    terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + "px";
+  }
 
-    function stopElementDrag() {
-        document.onpointerup = null;
-        document.onpointermove = null;
-    }
+  function stopElementDrag() {
+    document.onpointerup = null;
+    document.onpointermove = null;
+  }
 }
 
-dragElement(document.getElementById('plant1'));
-dragElement(document.getElementById('plant2'));
+dragElement(document.getElementById("plant1"));
+dragElement(document.getElementById("plant2"));
 ```
 
 In this lesson, we learned about event handling and added event listeners to our plant elements. This allows us to respond to user actions like clicks and drags.
 
 Understanding event handling is crucial for creating interactive webpages. In the next lesson, we’ll review what we’ve learned and finalize the draggable elements functionality. See you soon!
 
-# 05 - Putting It All Together
+## 05 - Understanding Closures
+
+Welcome back! Today, we’re going to learn about closures in JavaScript. Closures are a powerful feature that allow an inner function to access variables from its outer function. This is especially useful for managing state and keeping track of data over time.
+
+In our draggable terrarium, we need to track the position of the mouse and the element while it’s being dragged. We’ll use closures to do this.
+
+Open your `script.js` file. Inside the `dragElement` function, we’ll add more code to the `pointerDrag` function to update the mouse position when the user starts dragging the element.
+
+Here’s how we’ll do it:
+
+```javascript
+function dragElement(terrariumElement) {
+  let pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
+  terrariumElement.onpointerdown = pointerDrag;
+
+  function pointerDrag(e) {
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onpointermove = elementDrag;
+    document.onpointerup = stopElementDrag;
+  }
+
+  function elementDrag(e) {
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    terrariumElement.style.top = terrariumElement.offsetTop - pos2 + "px";
+    terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + "px";
+  }
+
+  function stopElementDrag() {
+    document.onpointerup = null;
+    document.onpointermove = null;
+  }
+}
+```
+
+The `pointerDrag` function now updates `pos3` and `pos4` to the current position of the mouse cursor. It also sets up event listeners for the `pointermove` and `pointerup` events. These events will be handled by the `elementDrag` and `stopElementDrag` functions, which we’ve already defined.
+
+Next, we’ll ensure that our plant elements are draggable by calling the `dragElement` function for each plant element:
+
+```javascript
+function dragElement(terrariumElement) {
+  let pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
+  terrariumElement.onpointerdown = pointerDrag;
+
+  function pointerDrag(e) {
+    e.preventDefault();
+    console.log(e);
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onpointermove = elementDrag;
+    document.onpointerup = stopElementDrag;
+  }
+
+  function elementDrag(e) {
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+
+    terrariumElement.style.top = terrariumElement.offsetTop - pos2 + "px";
+    terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + "px";
+  }
+
+  function stopElementDrag() {
+    document.onpointerup = null;
+    document.onpointermove = null;
+  }
+}
+
+dragElement(document.getElementById("plant1"));
+dragElement(document.getElementById("plant2"));
+```
+
+# 06 - Putting It All Together
 
 Welcome to the final lesson! Today, we will review what we’ve learned and finalize the draggable elements functionality. We’ve covered variables, functions, DOM manipulation, and event handling. Now, let’s ensure that all our plant elements are draggable.
 
 First, let’s make sure we call the `dragElement` function for each plant element. We will add calls to `dragElement` for all plant elements by their IDs.
 
 Open your `script.js` file and add the following lines:
+
 ```javascript
-dragElement(document.getElementById('plant1'));
-dragElement(document.getElementById('plant2'));
-dragElement(document.getElementById('plant3'));
-dragElement(document.getElementById('plant4'));
-dragElement(document.getElementById('plant5'));
-dragElement(document.getElementById('plant6'));
-dragElement(document.getElementById('plant7'));
-dragElement(document.getElementById('plant8'));
-dragElement(document.getElementById('plant9'));
-dragElement(document.getElementById('plant10'));
-dragElement(document.getElementById('plant11'));
-dragElement(document.getElementById('plant12'));
-dragElement(document.getElementById('plant13'));
-dragElement(document.getElementById('plant14'));
+dragElement(document.getElementById("plant1"));
+dragElement(document.getElementById("plant2"));
+dragElement(document.getElementById("plant3"));
+dragElement(document.getElementById("plant4"));
+dragElement(document.getElementById("plant5"));
+dragElement(document.getElementById("plant6"));
+dragElement(document.getElementById("plant7"));
+dragElement(document.getElementById("plant8"));
+dragElement(document.getElementById("plant9"));
+dragElement(document.getElementById("plant10"));
+dragElement(document.getElementById("plant11"));
+dragElement(document.getElementById("plant12"));
+dragElement(document.getElementById("plant13"));
+dragElement(document.getElementById("plant14"));
 ```
 
 Save your `script.js` file. Your final code should look like this:
+
 ```javascript
 function dragElement(terrariumElement) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    terrariumElement.onpointerdown = pointerDrag;
+  let pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
+  terrariumElement.onpointerdown = pointerDrag;
 
-    function pointerDrag(e) {
-        e.preventDefault();
-        console.log(e);
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onpointermove = elementDrag;
-        document.onpointerup = stopElementDrag;
-    }
+  function pointerDrag(e) {
+    e.preventDefault();
+    console.log(e);
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onpointermove = elementDrag;
+    document.onpointerup = stopElementDrag;
+  }
 
-    function elementDrag(e) {
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + 'px';
-        terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + 'px';
-    }
+  function elementDrag(e) {
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    terrariumElement.style.top = terrariumElement.offsetTop - pos2 + "px";
+    terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + "px";
+  }
 
-    function stopElementDrag() {
-        document.onpointerup = null;
-        document.onpointermove = null;
-    }
+  function stopElementDrag() {
+    document.onpointerup = null;
+    document.onpointermove = null;
+  }
 }
 
-dragElement(document.getElementById('plant1'));
-dragElement(document.getElementById('plant2'));
-dragElement(document.getElementById('plant3'));
-dragElement(document.getElementById('plant4'));
-dragElement(document.getElementById('plant5'));
-dragElement(document.getElementById('plant6'));
-dragElement(document.getElementById('plant7'));
-dragElement(document.getElementById('plant8'));
-dragElement(document.getElementById('plant9'));
-dragElement(document.getElementById('plant10'));
-dragElement(document.getElementById('plant11'));
-dragElement(document.getElementById('plant12'));
-dragElement(document.getElementById('plant13'));
-dragElement(document.getElementById('plant14'));
+dragElement(document.getElementById("plant1"));
+dragElement(document.getElementById("plant2"));
+dragElement(document.getElementById("plant3"));
+dragElement(document.getElementById("plant4"));
+dragElement(document.getElementById("plant5"));
+dragElement(document.getElementById("plant6"));
+dragElement(document.getElementById("plant7"));
+dragElement(document.getElementById("plant8"));
+dragElement(document.getElementById("plant9"));
+dragElement(document.getElementById("plant10"));
+dragElement(document.getElementById("plant11"));
+dragElement(document.getElementById("plant12"));
+dragElement(document.getElementById("plant13"));
+dragElement(document.getElementById("plant14"));
 ```
 
 In this final lesson, we reviewed the key concepts we’ve learned throughout this series and ensured that all our plant elements are draggable.
 
 Let’s recap:
+
 - We learned about variables and how they store data.
 - We created functions to group our code into reusable blocks.
 - We manipulated the DOM to interact with our HTML elements.
