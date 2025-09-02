@@ -16,6 +16,7 @@ function dragElement(terrariumElement) {
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
+        
         terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + 'px';
         terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + 'px';
     }
