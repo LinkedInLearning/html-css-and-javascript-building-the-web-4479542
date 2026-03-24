@@ -1,6 +1,6 @@
 # HTML, CSS, and JavaScript: Building the Web
 This is the repository for the LinkedIn Learning course HTML, CSS, and JavaScript: Building the Web. The full course is available from [LinkedIn Learning][lil-course-url].
-
+test
 ![lil-thumbnail-url]
 
 ## Course Description
