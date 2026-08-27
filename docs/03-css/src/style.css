@@ -1,4 +1,4 @@
-/* 
+
 body {
 	font-family: helvetica, arial, sans-serif;
 }
@@ -6,6 +6,9 @@ body {
 h1 {
 	color: #3a241d;
 	text-align: center;
+		/* background-color: pink;
+	text-align: right; Align the text to the right within its container */
+
 }
 
 #left-container {
@@ -47,7 +50,8 @@ h1 {
 	bottom: 0.5%;
 	left: 20%;
 	opacity: 0.5;
-	z-index: 1;
+	z-index: 1; 
+	/* The z-index property is used to control the stacking order of the elements. The higher the z-index, the more on top the element will be. */
 }
 
 .jar-top {
@@ -101,4 +105,27 @@ h1 {
 	position: absolute;
 	bottom: 45%;
 	left: 5%;
+}
+
+/* @keyframes slide-in {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.plant {
+	animation: slide-in 2s ease-in-out;
 } */
+
+.plant {
+	transition: width 2s, height 2s, background-color 2s;
+}
+
+.plant:hover {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+}
