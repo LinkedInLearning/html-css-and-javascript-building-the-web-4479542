@@ -107,7 +107,7 @@ h1 {
 	left: 5%;
 }
 
-@keyframes slide-in {
+/* @keyframes slide-in {
 	0% {
 		transform: translateX(-100%);
 	}
@@ -118,4 +118,14 @@ h1 {
 
 .plant {
 	animation: slide-in 2s ease-in-out;
+} */
+
+.plant {
+	transition: width 2s, height 2s, background-color 2s;
+}
+
+.plant:hover {
+	width: 200px;
+	height: 200px;
+	background-color: red;
 }
