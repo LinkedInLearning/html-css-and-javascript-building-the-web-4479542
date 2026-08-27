@@ -28,7 +28,5 @@ function dragElement(terrariumElement) {
 }
 
 document.querySelectorAll(".plant").forEach((plant) => {
-  plant.onpointerdown = function(){
-    dragElement(plant);
-  };
+  dragElement(plant);
 });
